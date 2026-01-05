@@ -1,4 +1,4 @@
-name: Fetch SQLiteCloud Food Table
+name: Fetch SQLiteCloud Subscription Table
 
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ jobs:
       - name: Query SQLiteCloud subscription table
         env:
           SQLITECLOUD_URL: ${{ secrets.SQLITECLOUD_URL }}
-        run: node fetch-food.js
+        run: node fetch-subscription.js
 
       - name: Upload Result
         uses: actions/upload-artifact@v6
